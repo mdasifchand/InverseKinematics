@@ -39,55 +39,6 @@ trafo2d_t forward_kinematics(const vector_t& q ) {
 
 
 
-
-/*************************************************
- * Task: Complete at least 2 of 3 Parts
- *
- * Part 1.
- * ^^^^^^^
- * Complete this inverse kinematics function for the robot defined by
- * the forward kinematics function defined above.
- *
- * It should return the joint angles q for the given goal specified in the
- * corresponding parameter.
- *
- * Only the translation (not rotation) part of the goal has to match.
- *
- * Hints:
- * - This is an non-linear optimization problem which can be solved by using
- *   an iterative algorithm.
- * - The algorithm should stop when norm of the error is smaller than 1e-3
- * - The algorithm should also stop when 200 iterations are reached
- *
- * Part 2.
- * ^^^^^^^
- * Refactor the code to expose the functionality as a library with API for
- * a naiive user and visualize the iterations. If you could not complete the
- * inverse_kinematics() function, use any "dummy" data for visualization.
- *
- * Part 3.
- * ^^^^^^^
- * Explain how this code could be used to control the motion of a robot
- * end-effector in real-time.
- *
- * Are there drawbacks to this approach?
- *
- * How would you determine if this ik algorithm can be computed in time
- * within a control loop? Make any assumptions necessary to draw a
- * conclusion.
- *
- * How would you design an api to expose this algorithm over middleware,
- * explain any considerations which may be relevant. Imagine users have
- * varying needs, some would like to use the inverse_kinematics() function
- * for offline applications, some would like to use it for real-time
- * execution in a middleware.
- *
- * This Part can be answered in any form: written explanations, code
- * examples, hand-drawn diagrams, etc.
- *
- ************************************************/
-
-
 enum class METHOD { NEWTONR, LAVENBERGM, ANALYTICAL };
 
 
