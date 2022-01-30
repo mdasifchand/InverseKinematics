@@ -1,0 +1,7 @@
+build/
+latex/
+html/
+coverage/
+*.info
+.clangd
+*.srctrl*
