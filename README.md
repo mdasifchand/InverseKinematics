@@ -13,7 +13,7 @@
  - [ ] TODO: Encapsulate in an object with RAII and expose important parts of it
       - Not fully done  
  - [ ] TODO: Ex: RTI DDS Connext => IDL generator to generate necessary message type => may be microRTIDDS for small hardware 
- - [ ] TODO: More optimization and cost effectiveness => ARM with it's optimizations 
+ - [ ] TODO: More optimization and cost effectiveness
  - [ ] TODO: UML class diagram for ROS2 API with the current implementation
         - friend singleton logger for the GUI
         - trigger a shared_ptr of the object (assuming if it's a closed loop with state estimation)
