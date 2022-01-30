@@ -1,7 +1,7 @@
 
- - [ ] TODO: Complete IK problem; use simple NL with Eigen and then probably improve with LM with a damping factor
- - [ ] TODO: Jacobi is rectangular => redundant system  => pseudo inverse 
- - [ ] TODO: limiting condition 1e-3 && it < 100 && someDisplayFlag
+ - [x] TODO: Complete IK problem; use simple NL with Eigen and then probably improve with LM with a damping factor
+ - [x] TODO: Jacobi is rectangular => redundant system  => pseudo inverse 
+ - [x] TODO: limiting condition 1e-3 && it < 100 && someDisplayFlag - tag 0.0.1 (kind of works!)
  - [ ] TODO: Refactor the code, probably include logger (GUI) as a friend function or a singleton
  - [ ] TODO: Explain the realtimeness of the solution
  - [ ] TODO:   How would you determine if this ik algorithm can be computed in time 
