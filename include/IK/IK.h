@@ -57,7 +57,7 @@ class IK
      */
 
     vector_t inverse_kinematics();
-    bool checkWS(const trafo2d_t goal);
+  
 
   private:
     vector_t m_qstart;

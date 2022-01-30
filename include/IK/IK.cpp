@@ -100,12 +100,7 @@ vector_t IK::inverse_kinematics()
         pangolin::FinishFrame();
         std::this_thread::sleep_for(std::chrono::milliseconds(100));
     }
-    std::cout << q_current << "Value" << std::endl;
+    std::cout <<"Value of current join angles are " << q_current(0) << " " << q_current(1)
+                                                    << q_current(2) << "  " <<  std::endl;
     return q_current;
-}
-// Checks if the value lies in the WS1
-bool checkWS(const trafo2d_t goal)
-{
-    // TODO
-    return true;
 }

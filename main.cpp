@@ -1,13 +1,3 @@
-#include <Eigen/Dense>
-#include <Eigen/Geometry>
-#include <chrono>
-#include <cmath>
-#include <iostream>
-#include <pangolin/display/display.h>
-#include <pangolin/plot/plotter.h>
-#include <thread>
-#include <vector>
-
 #include "IK.h"
 
 /**
@@ -28,7 +18,6 @@ int main()
     // q_val = inverse_kinematics(q_start, goal);
 
     IK ik(q_start, goal);
-    ik.inverse_kinematics();
 
     return 0;
 }
