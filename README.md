@@ -28,7 +28,12 @@
 - CERES (not used so far)
 - C++14
 
+## Convergence
+- Converges in a matter of 100 iterations (Could be a local minima?)
 
+## Images
+ ![convergence](https://github.com/mdasifchand/InverseKinematics/blob/master/images/Screenshot%20from%202022-01-30%2022-08-44.png)
+ ![iteration](https://github.com/mdasifchand/InverseKinematics/blob/master/images/Screenshot%20from%202022-01-30%2022-09-05.png)
 
 
 
