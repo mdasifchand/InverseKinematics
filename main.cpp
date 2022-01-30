@@ -88,12 +88,28 @@ trafo2d_t forward_kinematics(const vector_t& q ) {
  ************************************************/
 
 
-
 enum class METHOD { NEWTONR, LAVENBERGM, ANALYTICAL };
 
+
+
+/** @fn void computeVectorNorm(const vector_t& q)
+ * @brief Function to compute Norm
+*  @param q_current:   input joint angles
+*  @return double
+*/
  double computeVectorNorm(const vector_t& q){
     return sqrt( pow(q(0),2) + pow(q(1),2) + pow(q(2),2));
 }
+
+
+
+
+/** @fn void computeJacobi(matrix& J, const vector_t& q_current)
+ * @brief A function to compute Jacobian at current joint angles
+*  @param J :          input Jacobi.
+*  @param q_current:   input joint angles
+*  @return : void
+*/
 
 void  computeJacobi(matrix_t& J, const vector_t& q_current ){
 
@@ -108,12 +124,14 @@ void  computeJacobi(matrix_t& J, const vector_t& q_current ){
 
 }
 
-void checkRadians(vector_t& q) {
 
-
-
- }
-
+// TODO: include damping factor (Lavenberg Macquardt) 
+/** @fn void inverseKinematics(const vector_t& q_start, const trafo2d_t& goal )
+ * @brief Non linear least squares optimization IK problem without damping factor
+*  @param q_start :    input start joint angles 
+*  @param goal :       input goal @type SE(2)
+*  @return : vector_t
+*/
 
 vector_t inverse_kinematics(const vector_t& q_start, const trafo2d_t& goal ) {
     vector_t q_current = q_start;
@@ -161,7 +179,7 @@ vector_t inverse_kinematics(const vector_t& q_start, const trafo2d_t& goal ) {
 }
 
 
-
+// TODO:Check if the angle lies in workspace of the given configuration
 bool checkWS(const trafo2d_t goal)
 {
     // goal has to be definite

@@ -10,3 +10,16 @@
  - [ ] TODO: Ex: RTI DDS Connext => IDL generator to generate necessary message type => may be microRTIDDS for small hardware 
  - [ ] TODO: More optimization and cost effectiveness => ARM with it's optimizations 
  - [ ] TODO: UML class diagram for ROS2 API with the current implementation
+
+
+## Project Requirements
+
+- Eigen
+- Pangolin
+- CERES (not used so far)
+- C++14
+
+
+
+
+
