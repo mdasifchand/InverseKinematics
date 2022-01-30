@@ -65,7 +65,8 @@ enum class METHOD { NEWTONR, LAVENBERGM, ANALYTICAL };
 void  computeJacobi(matrix_t& J, const vector_t& q_current ){
 
     assert(J.rows() == 2);
-    assert(J.cols() == 3);;
+    assert(J.cols() == 3);
+
     J(0,0) = cos(q_current(0)) + cos(q_current(0) + q_current(1)) + cos(q_current(0) + q_current(1) + q_current(2));
     J(0,1) =   cos(q_current(0) + q_current(1)) + cos(q_current(0) + q_current(1) + q_current(2));
     J(0,2) =  cos(q_current(0) + q_current(1) + q_current(2));
