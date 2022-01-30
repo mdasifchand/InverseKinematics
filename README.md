@@ -1,4 +1,9 @@
 
+## Problem statement:
+
+Inverse kinematics of 3R planar robot, determine the joint configuration given the position of end effector. 
+
+
  - [x] TODO: Complete IK problem; use Non Linear Least Squares approach and then probably improve with Lavenberg Makquardt with a damping factor later
  - [x] TODO: Jacobi is rectangular => redundant system  => pseudo inverse 
  - [x] TODO: limiting condition 1e-3 && it < 100 && someDisplayFlag - tag 0.0.1 (kind of works!)
@@ -34,6 +39,16 @@
 ## Images
  ![convergence](https://github.com/mdasifchand/InverseKinematics/blob/master/images/Screenshot%20from%202022-01-30%2022-08-44.png)
  ![iteration](https://github.com/mdasifchand/InverseKinematics/blob/master/images/Screenshot%20from%202022-01-30%2022-09-05.png)
+
+## Important References: 
+
+https://robotacademy.net.au/lesson/velocity-of-3-joint-planar-robot-arm/ -> b/w T and final configuration of EF
+https://inst.eecs.berkeley.edu/~cs184/fa09/resources/ik.pdf
+https://motion.cs.illinois.edu/RoboticSystems/InverseKinematics.html
+https://github.com/ceres-solver/ceres-solver/blob/master/include/ceres/covariance.h -> relates to the estimation of deficiency
+http://robots.iit.edu/uploads/2/5/7/1/25715664/mmae_540_-_lecture_2_-_manipulator_kinematics.pdf
+https://www.cs.cmu.edu/~15464-s13/lectures/lecture6/iksurvey.pdf -> Damped least squares
+https://mathweb.ucsd.edu/~sbuss/ResearchWeb/ikmethods/SdlsPaper.pdf -> Damping Least Squares factor
 
 
 
