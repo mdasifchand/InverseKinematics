@@ -42,13 +42,13 @@ Inverse kinematics of 3R planar robot, determine the joint configuration given t
 
 ## Important References: 
 
-https://robotacademy.net.au/lesson/velocity-of-3-joint-planar-robot-arm/ -> b/w T and final configuration of EF
-https://inst.eecs.berkeley.edu/~cs184/fa09/resources/ik.pdf
-https://motion.cs.illinois.edu/RoboticSystems/InverseKinematics.html
-https://github.com/ceres-solver/ceres-solver/blob/master/include/ceres/covariance.h -> relates to the estimation of deficiency
-http://robots.iit.edu/uploads/2/5/7/1/25715664/mmae_540_-_lecture_2_-_manipulator_kinematics.pdf
-https://www.cs.cmu.edu/~15464-s13/lectures/lecture6/iksurvey.pdf -> Damped least squares
-https://mathweb.ucsd.edu/~sbuss/ResearchWeb/ikmethods/SdlsPaper.pdf -> Damping Least Squares factor
+- https://robotacademy.net.au/lesson/velocity-of-3-joint-planar-robot-arm/ -> b/w T and final configuration of EF
+- https://inst.eecs.berkeley.edu/~cs184/fa09/resources/ik.pdf
+- https://motion.cs.illinois.edu/RoboticSystems/InverseKinematics.html
+- https://github.com/ceres-solver/ceres-solver/blob/master/include/ceres/covariance.h -> relates to the estimation of deficiency
+- http://robots.iit.edu/uploads/2/5/7/1/25715664/mmae_540_-_lecture_2_-_manipulator_kinematics.pdf
+- https://www.cs.cmu.edu/~15464-s13/lectures/lecture6/iksurvey.pdf -> Damped least squares
+- https://mathweb.ucsd.edu/~sbuss/ResearchWeb/ikmethods/SdlsPaper.pdf -> Damping Least Squares factor
 
 
 
