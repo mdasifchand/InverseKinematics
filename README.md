@@ -29,7 +29,7 @@
 - C++14
 
 ## Convergence
-- Converges in a matter of 100 iterations (Could be a local minima?)
+- Converges in a matter of 120 iterations (Could be a local minima?)
 
 ## Images
  ![convergence](https://github.com/mdasifchand/InverseKinematics/blob/master/images/Screenshot%20from%202022-01-30%2022-08-44.png)
