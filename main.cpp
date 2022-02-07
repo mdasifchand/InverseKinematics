@@ -17,7 +17,8 @@ int main()
     vector_t q_val(3);
     // q_val = inverse_kinematics(q_start, goal);
 
-    IK ik(q_start, goal);
+    IK ik;
+    ik.inverse_kinematics(q_start, goal);
 
     return 0;
 }

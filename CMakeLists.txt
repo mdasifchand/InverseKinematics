@@ -6,7 +6,7 @@ include_directories(${Pangolin_INCLUDE_DIRS})
 set(CMAKE_CXX_STANDARD 14)
 include_directories(${EIGEN3_INCLUDE_DIR})
 add_executable(IK main.cpp include/IK/IK.cpp include/IK/IK.h)
-target_link_libraries(IK pango_display pango_plot)
+target_link_libraries(IK ${Pangolin_LIBRARIES})
 target_include_directories(IK PUBLIC
         $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include/IK>
         )

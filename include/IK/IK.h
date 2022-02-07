@@ -20,7 +20,7 @@ typedef Eigen::Transform<double, 2, Eigen::Affine> trafo2d_t;
 class IK
 {
   public:
-    IK(vector_t q_start, trafo2d_t goal) : m_qstart(m_qstart), m_goal(goal)
+    IK() 
     {
         std::cout << " Starting the IK solver " << std::endl;
     }
@@ -56,12 +56,9 @@ class IK
      *  @return : vector_t
      */
 
-    vector_t inverse_kinematics();
+    vector_t inverse_kinematics(const vector_t& start, const trafo2d_t& goal);
   
 
-  private:
-    vector_t m_qstart;
-    trafo2d_t m_goal;
 };
 
 #endif // IK_H

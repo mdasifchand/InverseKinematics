@@ -52,12 +52,12 @@ void IK::computeJacobi(matrix_t & J, const vector_t & q_current)
     J(1, 2) = sin(q_current(0) + q_current(1) + q_current(2));
 }
 
-vector_t IK::inverse_kinematics()
+vector_t IK::inverse_kinematics(const vector_t& start, const trafo2d_t& goal)
 {
-    vector_t q_current = m_qstart;
+    vector_t q_current = start;
     vector_t diff_theta(3);
     vector_t diff_pos(2);
-    diff_theta = m_qstart;
+    diff_theta = start;
     matrix_t J(2, 3);
     matrix_t pseudo_inv(3, 2);
     trafo2d_t t;
@@ -88,7 +88,7 @@ vector_t IK::inverse_kinematics()
         // rectangular)
         pseudo_inv = J.transpose() * ((J * J.transpose()).inverse());
         diff_pos =
-            m_goal.translation() - forward_kinematics(q_current).translation();
+            goal.translation() - forward_kinematics(q_current).translation();
         diff_theta = pseudo_inv * diff_pos;
         q_current = q_current + diff_theta;
         it++;
