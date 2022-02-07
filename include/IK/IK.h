@@ -58,6 +58,15 @@ class IK
 
     vector_t inverse_kinematics(const vector_t& start, const trafo2d_t& goal);
   
+   /** @fn wraps angle from nth rotation to 0 to 2*PI
+     * @brief Wrap angle function 
+     *  @param q_radians : resultant joint angle vector in radians with size (1,3)
+     *  @return : Void
+     */
+
+    void wrap_angles(vector_t& q_radians); 
+
+
 
 };
 

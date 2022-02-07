@@ -3,6 +3,9 @@
 //
 
 #include "IK.h"
+#include <cmath>
+
+ constexpr double PI = std::atan(1)*4; 
 
 trafo2d_t IK::forward_kinematics(const vector_t & q)
 {
@@ -103,5 +106,27 @@ vector_t IK::inverse_kinematics(const vector_t& start, const trafo2d_t& goal)
     }
     std::cout <<"Value of current join angles are " << q_current(0) << " " << q_current(1)
                                                     << q_current(2) << "  " <<  std::endl;
+
+    //wrap angles to 0 .. 2pi
+    wrap_angles(q_current);
+        
+    std::cout <<"Value of current join angles after wrapping  " << q_current(0) << " " << q_current(1)
+                                                    << q_current(2) << "  " <<  std::endl;
+
     return q_current;
 }
+
+
+void IK::wrap_angles(vector_t& q_radians)
+{
+    // asserting the size, it's on heap by default
+    assert(q_radians.size() == 3); 
+   
+    // Implement wrapping (TODO)
+    // Condition 1 : angle > 3.14
+    // Condition 2 : 0 < angle < -2*pi
+    // Condition 3: 0 < angle < 2*pi 
+        
+}
+
+
