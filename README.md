@@ -30,7 +30,7 @@ Inverse kinematics of 3R planar robot, determine the joint configuration given t
 ## Project Requirements
 
 - Eigen
-- Pangolin
+- Pangolin 
 - CERES (not used so far)
 - C++14
 

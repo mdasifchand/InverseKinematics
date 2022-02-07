@@ -106,13 +106,10 @@ vector_t IK::inverse_kinematics(const vector_t& start, const trafo2d_t& goal)
     }
     std::cout <<"Value of current join angles are " << q_current(0) << " " << q_current(1)
                                                     << q_current(2) << "  " <<  std::endl;
-
     //wrap angles to 0 .. 2pi
     wrap_angles(q_current);
-        
     std::cout <<"Value of current join angles after wrapping  " << q_current(0) << " " << q_current(1)
-                                                    << q_current(2) << "  " <<  std::endl;
-
+                                                    		<< q_current(2) << "  " <<  std::endl;
     return q_current;
 }
 
