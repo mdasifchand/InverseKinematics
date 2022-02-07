@@ -62,6 +62,7 @@ vector_t IK::inverse_kinematics(const vector_t& start, const trafo2d_t& goal)
     matrix_t pseudo_inv(3, 2);
     trafo2d_t t;
     int it = 0;
+    double scalar = 0.74;
     // create Pangolin Window
     pangolin::CreateWindowAndBind("Main", 720, 640);
     pangolin::DataLog logger;
@@ -86,7 +87,7 @@ vector_t IK::inverse_kinematics(const vector_t& start, const trafo2d_t& goal)
         computeJacobi(J, q_current);
         // compute pseudo inverse, this is a redundant system (Jacobi is
         // rectangular)
-        pseudo_inv = J.transpose() * ((J * J.transpose()).inverse());
+        pseudo_inv = J.transpose() * ((J * J.transpose()+ scalar*matrix_t::Identity(2,2)).inverse());
         diff_pos =
             goal.translation() - forward_kinematics(q_current).translation();
         diff_theta = pseudo_inv * diff_pos;
