@@ -10,9 +10,6 @@ Inverse kinematics of 3R planar robot, determine the joint configuration given t
  - [x] TODO: Refactor the code, probably include logger (GUI) as a friend function or a singleton
  - [x] TODO: Explain the realtimeness of the solution
  - [x] TODO: Implemented with damping factor (No of iterations required for convergence reduced by almost 20 percent) 
- - [ ] TODO:   How would you determine if this ik algorithm can be computed in time 
-      - Determine joint velocity differential equation then equate to J(q)*\q
-      - Probably solving it over the contraint of time using LM or some non linear solvers or Langrange multipliers etc......
  - [ ] within a control loop? Make any assumptions necessary to draw a conclusion.
       - We can estimate states with the error propagation
       - Then get a better estimate at every iteration or time lapse 
