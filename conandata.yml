@@ -1,0 +1,7 @@
+sources:
+  "0.0.1":
+    url: "https://github.com/mdasifchand/InverseKinematics/archive/refs/tags/0.0.1.zip"
+    sha256: "efaf3a394a00359cd1917482d4f4e637834b4da05ef5ebb0a4e5841228f85985"
+  "0.0.2":
+     url: "https://github.com/mdasifchand/InverseKinematics/archive/refs/tags/0.0.2.zip"
+     sha256: e8cf1675d795d085a02ada5d7d71c687573a6911
